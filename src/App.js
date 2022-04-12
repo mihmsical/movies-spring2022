@@ -14,6 +14,8 @@ const App = () => {
 	
 	const [currentMovie, setCurrentMovie] = useState(null);
 	
+	console.log(currentMovie);
+	
     return (
         <div className="movie-container">
 			{
@@ -21,6 +23,7 @@ const App = () => {
 					<>
 						<MoviePreview
 							movieToPreview={movie}
+							setCurrentMovie={setCurrentMovie}
 						/>
 					</>
 				)

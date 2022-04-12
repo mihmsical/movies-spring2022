@@ -1,12 +1,16 @@
 import './App.css';
 const MoviePreview = (props) => {
 	
-	const {movieToPreview} = props;
+	const {movieToPreview, setCurrentMovie} = props;
 	
 	return (
 		<>
 			<p>{movieToPreview.title}</p>
-			<img src={movieToPreview.posterUrl} alt={movieToPreview.title}/>
+			<img 
+				src={movieToPreview.posterUrl} 
+				alt={movieToPreview.title}
+				onClick = {() => setCurrentMovie(movieToPreview)}
+			/>
 		</>
 	)
 }
