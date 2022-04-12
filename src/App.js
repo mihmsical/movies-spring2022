@@ -1,14 +1,16 @@
 import './App.css';
 import {movies} from './movies';
+import MoviePreview from "./MoviePreview";
 
 const App = () => {
     return (
-        <div>
+        <div className="movie-container">
 			{
 				movies.map((movie) => 
 					<>
-						<p>{movie.title}</p>
-						<img src={movie.posterUrl}/>
+						<MoviePreview
+							movieToPreview={movie}
+						/>
 					</>
 				)
 			}
